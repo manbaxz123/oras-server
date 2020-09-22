@@ -5,38 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a626e92b-47d1-4c0d-91d5-d4c351b17ac3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_infradna_tool_bridge_method_annotation_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysema_commons_mysema_commons_lang_0_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_querydsl_querydsl_core_4_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/dao/IJobRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/job/controller/JobController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/job/service/IJobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/job/service/JobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__hikari_cp_hikari_cp_2_13_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oras.iml" beforeDir="false" afterPath="$PROJECT_DIR$/oras.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone/oras/OrasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/OrasApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/AccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/AccountEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/CandidateEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/CandidateEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/JobApplicationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/JobApplicationEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/JobEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/JobEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/MailTemplateEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/MailTemplateEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/SysdiagramsEntity.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/TalentPoolEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone/oras/entity/TalentPoolEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/oras-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2020-09-22T03-56-40_020-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-capstone.oras.OrasApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-capstone.oras.OrasApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/capstone.oras.OrasApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/capstone.oras.OrasApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
