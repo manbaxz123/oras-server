@@ -1,29 +1,31 @@
 package capstone.oras.entity;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Candidate", schema = "dbo", catalog = "ORAS")
 public class CandidateEntity {
-    private Integer id;
+    private int id;
     private String fullname;
     private String email;
     private String phoneNo;
     private String address;
+    private Collection<JobApplicationEntity> jobApplicationsById;
 
     @Id
-    @Column(name = "id")
-    public Integer getId() {
+    @Column(name = "id", nullable = false)
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-
-    @Column(name = "fullname")
+    @Basic
+    @Column(name = "fullname", nullable = true, length = 50)
     public String getFullname() {
         return fullname;
     }
@@ -32,7 +34,8 @@ public class CandidateEntity {
         this.fullname = fullname;
     }
 
-    @Column(name = "email")
+    @Basic
+    @Column(name = "email", nullable = true, length = 90)
     public String getEmail() {
         return email;
     }
@@ -41,7 +44,8 @@ public class CandidateEntity {
         this.email = email;
     }
 
-    @Column(name = "phoneNo")
+    @Basic
+    @Column(name = "phoneNo", nullable = true, length = 20)
     public String getPhoneNo() {
         return phoneNo;
     }
@@ -50,7 +54,8 @@ public class CandidateEntity {
         this.phoneNo = phoneNo;
     }
 
-    @Column(name = "address")
+    @Basic
+    @Column(name = "address", nullable = true, length = 2147483647)
     public String getAddress() {
         return address;
     }
@@ -64,7 +69,7 @@ public class CandidateEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CandidateEntity that = (CandidateEntity) o;
-        return Objects.equals(id, that.id) &&
+        return id == that.id &&
                 Objects.equals(fullname, that.fullname) &&
                 Objects.equals(email, that.email) &&
                 Objects.equals(phoneNo, that.phoneNo) &&
@@ -74,5 +79,14 @@ public class CandidateEntity {
     @Override
     public int hashCode() {
         return Objects.hash(id, fullname, email, phoneNo, address);
+    }
+
+    @OneToMany(mappedBy = "candidateByCandidateId")
+    public Collection<JobApplicationEntity> getJobApplicationsById() {
+        return jobApplicationsById;
+    }
+
+    public void setJobApplicationsById(Collection<JobApplicationEntity> jobApplicationsById) {
+        this.jobApplicationsById = jobApplicationsById;
     }
 }

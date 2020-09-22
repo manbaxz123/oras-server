@@ -1,28 +1,32 @@
 package capstone.oras.entity;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Account")
 public class AccountEntity {
-    private Integer id;
+    private int id;
     private String email;
     private String password;
     private String fullname;
     private Boolean active;
+    private Collection<JobEntity> jobsById;
+    private Collection<MailTemplateEntity> mailTemplatesById;
 
     @Id
-    @Column(name = "id")
-    public Integer getId() {
+    @Column(name = "id", nullable = false)
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    @Column(name = "email")
+    @Basic
+    @Column(name = "email", nullable = true, length = 50)
     public String getEmail() {
         return email;
     }
@@ -31,7 +35,8 @@ public class AccountEntity {
         this.email = email;
     }
 
-    @Column(name = "password")
+    @Basic
+    @Column(name = "password", nullable = true, length = 50)
     public String getPassword() {
         return password;
     }
@@ -40,7 +45,8 @@ public class AccountEntity {
         this.password = password;
     }
 
-    @Column(name = "fullname")
+    @Basic
+    @Column(name = "fullname", nullable = true, length = 50)
     public String getFullname() {
         return fullname;
     }
@@ -49,7 +55,8 @@ public class AccountEntity {
         this.fullname = fullname;
     }
 
-    @Column(name = "active")
+    @Basic
+    @Column(name = "active", nullable = true)
     public Boolean getActive() {
         return active;
     }
@@ -63,7 +70,7 @@ public class AccountEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AccountEntity that = (AccountEntity) o;
-        return Objects.equals(id, that.id) &&
+        return id == that.id &&
                 Objects.equals(email, that.email) &&
                 Objects.equals(password, that.password) &&
                 Objects.equals(fullname, that.fullname) &&
@@ -73,5 +80,23 @@ public class AccountEntity {
     @Override
     public int hashCode() {
         return Objects.hash(id, email, password, fullname, active);
+    }
+
+    @OneToMany(mappedBy = "accountByCreatorId")
+    public Collection<JobEntity> getJobsById() {
+        return jobsById;
+    }
+
+    public void setJobsById(Collection<JobEntity> jobsById) {
+        this.jobsById = jobsById;
+    }
+
+    @OneToMany(mappedBy = "accountByCreatorId")
+    public Collection<MailTemplateEntity> getMailTemplatesById() {
+        return mailTemplatesById;
+    }
+
+    public void setMailTemplatesById(Collection<MailTemplateEntity> mailTemplatesById) {
+        this.mailTemplatesById = mailTemplatesById;
     }
 }

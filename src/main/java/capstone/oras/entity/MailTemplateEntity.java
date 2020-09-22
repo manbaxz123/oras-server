@@ -6,23 +6,25 @@ import java.util.Objects;
 @Entity
 @Table(name = "MailTemplate")
 public class MailTemplateEntity {
-    private Integer id;
+    private int id;
     private String subject;
     private String body;
     private String type;
     private Integer creatorId;
+    private AccountEntity accountByCreatorId;
 
     @Id
-    @Column(name = "id")
-    public Integer getId() {
+    @Column(name = "id", nullable = false)
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    @Column(name = "subject")
+    @Basic
+    @Column(name = "subject", nullable = true, length = 100)
     public String getSubject() {
         return subject;
     }
@@ -31,7 +33,8 @@ public class MailTemplateEntity {
         this.subject = subject;
     }
 
-    @Column(name = "body")
+    @Basic
+    @Column(name = "body", nullable = true, length = 2147483647)
     public String getBody() {
         return body;
     }
@@ -40,7 +43,8 @@ public class MailTemplateEntity {
         this.body = body;
     }
 
-    @Column(name = "type")
+    @Basic
+    @Column(name = "type", nullable = true, length = 100)
     public String getType() {
         return type;
     }
@@ -49,7 +53,8 @@ public class MailTemplateEntity {
         this.type = type;
     }
 
-    @Column(name = "creatorId")
+    @Basic
+    @Column(name = "creatorId", nullable = true)
     public Integer getCreatorId() {
         return creatorId;
     }
@@ -63,7 +68,7 @@ public class MailTemplateEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MailTemplateEntity that = (MailTemplateEntity) o;
-        return Objects.equals(id, that.id) &&
+        return id == that.id &&
                 Objects.equals(subject, that.subject) &&
                 Objects.equals(body, that.body) &&
                 Objects.equals(type, that.type) &&
@@ -73,5 +78,15 @@ public class MailTemplateEntity {
     @Override
     public int hashCode() {
         return Objects.hash(id, subject, body, type, creatorId);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "creatorId", referencedColumnName = "id")
+    public AccountEntity getAccountByCreatorId() {
+        return accountByCreatorId;
+    }
+
+    public void setAccountByCreatorId(AccountEntity accountByCreatorId) {
+        this.accountByCreatorId = accountByCreatorId;
     }
 }
