@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "MailTemplate", schema = "dbo", catalog = "ORAS")
+@Table(name = "MailTemplate")
 public class MailTemplateEntity {
     private Integer id;
     private String subject;
@@ -22,7 +22,6 @@ public class MailTemplateEntity {
         this.id = id;
     }
 
-    @Basic
     @Column(name = "subject")
     public String getSubject() {
         return subject;
@@ -32,7 +31,6 @@ public class MailTemplateEntity {
         this.subject = subject;
     }
 
-    @Basic
     @Column(name = "body")
     public String getBody() {
         return body;
@@ -42,7 +40,6 @@ public class MailTemplateEntity {
         this.body = body;
     }
 
-    @Basic
     @Column(name = "type")
     public String getType() {
         return type;
@@ -52,7 +49,6 @@ public class MailTemplateEntity {
         this.type = type;
     }
 
-    @Basic
     @Column(name = "creatorId")
     public Integer getCreatorId() {
         return creatorId;

@@ -5,7 +5,7 @@ import java.sql.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Job", schema = "dbo", catalog = "ORAS")
+@Table(name = "Job")
 public class JobEntity {
     private Integer id;
     private String title;
@@ -32,7 +32,6 @@ public class JobEntity {
         this.id = id;
     }
 
-    @Basic
     @Column(name = "title")
     public String getTitle() {
         return title;
@@ -42,7 +41,6 @@ public class JobEntity {
         this.title = title;
     }
 
-    @Basic
     @Column(name = "description")
     public String getDescription() {
         return description;
@@ -52,7 +50,6 @@ public class JobEntity {
         this.description = description;
     }
 
-    @Basic
     @Column(name = "salaryFrom")
     public Double getSalaryFrom() {
         return salaryFrom;
@@ -62,7 +59,6 @@ public class JobEntity {
         this.salaryFrom = salaryFrom;
     }
 
-    @Basic
     @Column(name = "salaryTo")
     public Double getSalaryTo() {
         return salaryTo;
@@ -72,7 +68,6 @@ public class JobEntity {
         this.salaryTo = salaryTo;
     }
 
-    @Basic
     @Column(name = "currency")
     public String getCurrency() {
         return currency;
@@ -82,7 +77,6 @@ public class JobEntity {
         this.currency = currency;
     }
 
-    @Basic
     @Column(name = "salaryHidden")
     public Boolean getSalaryHidden() {
         return salaryHidden;
@@ -92,7 +86,6 @@ public class JobEntity {
         this.salaryHidden = salaryHidden;
     }
 
-    @Basic
     @Column(name = "vacancies")
     public Integer getVacancies() {
         return vacancies;
@@ -102,7 +95,6 @@ public class JobEntity {
         this.vacancies = vacancies;
     }
 
-    @Basic
     @Column(name = "applyFrom")
     public Date getApplyFrom() {
         return applyFrom;
@@ -112,7 +104,6 @@ public class JobEntity {
         this.applyFrom = applyFrom;
     }
 
-    @Basic
     @Column(name = "applyTo")
     public Date getApplyTo() {
         return applyTo;
@@ -122,7 +113,6 @@ public class JobEntity {
         this.applyTo = applyTo;
     }
 
-    @Basic
     @Column(name = "talentPoolId")
     public Integer getTalentPoolId() {
         return talentPoolId;
@@ -132,7 +122,6 @@ public class JobEntity {
         this.talentPoolId = talentPoolId;
     }
 
-    @Basic
     @Column(name = "creatorId")
     public Integer getCreatorId() {
         return creatorId;
@@ -142,7 +131,6 @@ public class JobEntity {
         this.creatorId = creatorId;
     }
 
-    @Basic
     @Column(name = "status")
     public String getStatus() {
         return status;
@@ -152,7 +140,6 @@ public class JobEntity {
         this.status = status;
     }
 
-    @Basic
     @Column(name = "createDate")
     public Date getCreateDate() {
         return createDate;

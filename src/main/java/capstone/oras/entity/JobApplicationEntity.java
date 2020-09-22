@@ -5,7 +5,7 @@ import java.sql.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name = "JobApplication", schema = "dbo", catalog = "ORAS")
+@Table(name = "JobApplication")
 public class JobApplicationEntity {
     private Integer id;
     private Integer candidateId;
@@ -28,7 +28,6 @@ public class JobApplicationEntity {
         this.id = id;
     }
 
-    @Basic
     @Column(name = "candidateId")
     public Integer getCandidateId() {
         return candidateId;
@@ -38,7 +37,6 @@ public class JobApplicationEntity {
         this.candidateId = candidateId;
     }
 
-    @Basic
     @Column(name = "jobId")
     public Integer getJobId() {
         return jobId;
@@ -48,7 +46,6 @@ public class JobApplicationEntity {
         this.jobId = jobId;
     }
 
-    @Basic
     @Column(name = "matchingRate")
     public Double getMatchingRate() {
         return matchingRate;
@@ -68,7 +65,6 @@ public class JobApplicationEntity {
         this.cv = cv;
     }
 
-    @Basic
     @Column(name = "applyDate")
     public Date getApplyDate() {
         return applyDate;
@@ -78,7 +74,6 @@ public class JobApplicationEntity {
         this.applyDate = applyDate;
     }
 
-    @Basic
     @Column(name = "talentPoolId")
     public Integer getTalentPoolId() {
         return talentPoolId;
@@ -88,7 +83,6 @@ public class JobApplicationEntity {
         this.talentPoolId = talentPoolId;
     }
 
-    @Basic
     @Column(name = "source")
     public String getSource() {
         return source;
@@ -98,7 +92,6 @@ public class JobApplicationEntity {
         this.source = source;
     }
 
-    @Basic
     @Column(name = "status")
     public String getStatus() {
         return status;
@@ -108,7 +101,6 @@ public class JobApplicationEntity {
         this.status = status;
     }
 
-    @Basic
     @Column(name = "comment")
     public String getComment() {
         return comment;

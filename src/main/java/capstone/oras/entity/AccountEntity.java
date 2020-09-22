@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Account", schema = "dbo", catalog = "ORAS")
+@Table(name = "Account")
 public class AccountEntity {
     private Integer id;
     private String email;
@@ -22,7 +22,6 @@ public class AccountEntity {
         this.id = id;
     }
 
-    @Basic
     @Column(name = "email")
     public String getEmail() {
         return email;
@@ -32,7 +31,6 @@ public class AccountEntity {
         this.email = email;
     }
 
-    @Basic
     @Column(name = "password")
     public String getPassword() {
         return password;
@@ -42,7 +40,6 @@ public class AccountEntity {
         this.password = password;
     }
 
-    @Basic
     @Column(name = "fullname")
     public String getFullname() {
         return fullname;
@@ -52,7 +49,6 @@ public class AccountEntity {
         this.fullname = fullname;
     }
 
-    @Basic
     @Column(name = "active")
     public Boolean getActive() {
         return active;

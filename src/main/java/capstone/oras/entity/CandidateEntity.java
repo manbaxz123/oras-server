@@ -22,7 +22,7 @@ public class CandidateEntity {
         this.id = id;
     }
 
-    @Basic
+
     @Column(name = "fullname")
     public String getFullname() {
         return fullname;
@@ -32,7 +32,6 @@ public class CandidateEntity {
         this.fullname = fullname;
     }
 
-    @Basic
     @Column(name = "email")
     public String getEmail() {
         return email;
@@ -42,7 +41,6 @@ public class CandidateEntity {
         this.email = email;
     }
 
-    @Basic
     @Column(name = "phoneNo")
     public String getPhoneNo() {
         return phoneNo;
@@ -52,7 +50,6 @@ public class CandidateEntity {
         this.phoneNo = phoneNo;
     }
 
-    @Basic
     @Column(name = "address")
     public String getAddress() {
         return address;

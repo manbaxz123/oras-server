@@ -2,8 +2,7 @@ package capstone.oras;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "capstone.oras")
 public class OrasApplication {
 
 	public static void main(String[] args) {

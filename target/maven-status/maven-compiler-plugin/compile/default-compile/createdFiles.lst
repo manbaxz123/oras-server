@@ -1,1 +1,17 @@
+capstone\oras\entity\MailTemplateEntity.class
+capstone\oras\entity\AccountEntity.class
+capstone\oras\job\service\IJobService.class
+capstone\oras\entity\QCandidateEntity.class
+capstone\oras\entity\QTalentPoolEntity.class
 capstone\oras\OrasApplication.class
+capstone\oras\entity\JobEntity.class
+capstone\oras\entity\CandidateEntity.class
+capstone\oras\entity\QAccountEntity.class
+capstone\oras\entity\QJobApplicationEntity.class
+capstone\oras\dao\IJobRepository.class
+capstone\oras\job\service\JobService.class
+capstone\oras\job\controller\JobController.class
+capstone\oras\entity\QJobEntity.class
+capstone\oras\entity\QMailTemplateEntity.class
+capstone\oras\entity\TalentPoolEntity.class
+capstone\oras\entity\JobApplicationEntity.class

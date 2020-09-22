@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "TalentPool", schema = "dbo", catalog = "ORAS")
+@Table(name = "TalentPool")
 public class TalentPoolEntity {
     private Integer id;
     private String name;
@@ -19,7 +19,6 @@ public class TalentPoolEntity {
         this.id = id;
     }
 
-    @Basic
     @Column(name = "name")
     public String getName() {
         return name;
